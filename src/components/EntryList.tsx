@@ -34,7 +34,7 @@ export function EntryList({ tracker }: EntryListProps) {
           </div>
           <Button size="sm" variant="secondary" onClick={() => setAdding(true)}>
             <Plus size={16} />
-            Add Entry
+            Log Past Time
           </Button>
         </div>
 
@@ -110,14 +110,16 @@ export function EntryList({ tracker }: EntryListProps) {
           setAdding(false)
           setEditing(null)
         }}
-        onSave={(data) => {
+        onSave={(data, keepOpen) => {
           if (editing) {
             tracker.updateEntry(editing.id, data)
           } else {
             tracker.addManualEntry(data)
           }
-          setAdding(false)
-          setEditing(null)
+          if (!keepOpen) {
+            setAdding(false)
+            setEditing(null)
+          }
         }}
       />
     </>
