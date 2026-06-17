@@ -6,7 +6,6 @@ import type { TimeEntry } from '../types'
 import {
   formatCurrency,
   formatDuration,
-  formatHoursDecimal,
   getEntryStats,
 } from '../utils/stats'
 import { Button, Card } from './ui'

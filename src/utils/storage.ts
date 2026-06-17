@@ -1,4 +1,4 @@
-import type { AppState, Settings, TimeEntry } from './types'
+import type { AppState, Settings, TimeEntry } from '../types'
 
 const STORAGE_KEY = 'work-hours-tracker-v1'
 
